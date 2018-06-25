@@ -6,6 +6,9 @@
 	$a = $_SESSION['pollCountYes'];
 	$b = $_SESSION['pollCountNo'];
 
+	echo $a; 
+	echo $b;
+
 	if ($a == null) {
 		$a = 0;
 	}
