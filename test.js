@@ -5,22 +5,15 @@ window.onload = function (e) {
 };
 function initializeApp(data) {
     liff.getProfile().then(function (result) {
-    //     var app = new Vue({
-    //   el: '#app',
-    //   data: {
-    //     language: data.language,
-    //     contextType: data.context.type,
-    //     viewType: data.context.viewType,
-    //     userId: data.context.userId,
-    //     name: result.displayName
-    //   }
-    // })
+        var app = new Vue({
+          el: '#app',
+          data: {
+            language: data.language,
+            contextType: data.context.type,
+            viewType: data.context.viewType,
+            userId: data.context.userId,
+            name: result.displayName
+          }
+        })
     });
 }
-var app = new Vue({
-      el: '#app',
-      data: {
-        language: "fac",
-        name: "fack"
-      }
-})
