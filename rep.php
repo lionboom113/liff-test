@@ -1,6 +1,7 @@
 <!-- This file allows you to host this page as a static file on Heroku -->
 <?php 
-	session_id('1111');
+	$poll = ($_GET["poll"]);
+	session_id($poll);
 	session_start();
 
 	$a = $_SESSION['pollCountYes'];
@@ -14,9 +15,6 @@
 		$b = 0;
 	}
 
-	echo $_SESSION['pollCountYes']; 
-	echo $_SESSION['pollCountNo'];
-
 	$ans = ($_GET["ans"]);
 	if($ans == 'yes') { 
 	 	$a++;
@@ -25,8 +23,7 @@
 	}
 	$_SESSION['pollCountYes'] = $a;
 	$_SESSION['pollCountNo'] = $b;
-	 echo $_SESSION['pollCountYes'];
-	 echo $_SESSION['pollCountNo'];
  ?>
 YES:<?php echo $a; ?>
+<br/>
 NO:<?php echo $b; ?>

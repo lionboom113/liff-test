@@ -10,6 +10,7 @@ function initializeD(data) {
 }
 function initializeApp(data) {
     liff.getProfile().then(function (result) {
+
         var app = new Vue({
           el: '#app',
           data: {
@@ -17,6 +18,7 @@ function initializeApp(data) {
           },
           methods: {
             sendPoll: function sendPic (test) {
+              var random = Math.random();
                 liff.sendMessages([
                 // {
                 //     type: 'image',
@@ -33,12 +35,12 @@ function initializeApp(data) {
                           {
                             "type": "uri",
                             "label": "はい！",
-                            "uri": "line://app/1589046222-VkRzQel7/rep.php?ans=no"
+                            "uri": "line://app/1589046222-VkRzQel7/rep.php?ans=no&poll=" + random
                           },
                           {
                             "type": "uri",
                             "label": "いいえ!",
-                            "uri": "line://app/1589046222-VkRzQel7rep.php?ans=no"
+                            "uri": "line://app/1589046222-VkRzQel7rep.php?ans=no&poll=" + random
                           }
                       ]
                   }
@@ -52,4 +54,14 @@ function initializeApp(data) {
           }
         })
     });
+}
+
+function makeid() {
+  var text = "";
+  var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+  for (var i = 0; i < 5; i++)
+    text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+  return text;
 }
