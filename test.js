@@ -107,45 +107,25 @@ function initializeApp(data) {
                 //     originalContentUrl: url,
                 //     previewImageUrl: url
                 // },
-{
-  "type": "bubble",
-  "header": {
-    "type": "box",
-    "layout": "vertical",
-    "contents": [
-      {
-        "type": "text",
-        "text": "header"
-      }
-    ]
-  },
-  "hero": {
-    "type": "image",
-    "url": "https://example.com/flex/images/image.jpg",
-    "size": "full",
-    "aspectRatio": "2:1"
-  },
-  "body": {
-    "type": "box",
-    "layout": "vertical",
-    "contents": [
-      {
-        "type": "text",
-        "text": "body"
-      }
-    ]
-  },
-  "footer": {
-    "type": "box",
-    "layout": "vertical",
-    "contents": [
-      {
-        "type": "text",
-        "text": "footer"
-      }
-    ]
-  }
-}
+                {
+                  "type": "template",
+                  "altText": "This is a buttons template",
+                  "template": {
+                      "type": "buttons",
+                      "thumbnailImageUrl": url,
+                      "imageAspectRatio": "square",
+                      "imageSize": "contain",
+                      "imageBackgroundColor": "#FFFFFF",
+                      "text": test,
+                      "actions": [
+                          {
+                            "type": "uri",
+                            "label": "画像で返事",
+                            "uri": "line://app/1589046222-VkRzQel7"
+                          }
+                      ]
+                  }
+                }
                 ]).then(function () {
                     liff.closeWindow();
                 }).catch(function (error) {
