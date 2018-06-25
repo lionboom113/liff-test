@@ -114,8 +114,7 @@ function initializeApp(data) {
       "imageAspectRatio": "rectangle",
       "imageSize": "cover",
       "imageBackgroundColor": "#FFFFFF",
-      "title": "Menu",
-      "text": "Please select",
+      "text": "",
       "actions": [
           {
             "type": "uri",
