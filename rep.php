@@ -6,12 +6,18 @@
 	$a = $_SESSION['pollCountYes'];
 	$b = $_SESSION['pollCountNo'];
 
-	echo $a; 
-	echo $b;
+
 
 	if ($a == null) {
 		$a = 0;
 	}
+
+	if ($b == null) {
+		$b = 0;
+	}
+
+	echo $a; 
+	echo $b;
 
 	$ans = ($_GET["ans"]);
 	if($ans == 'yes') { 
