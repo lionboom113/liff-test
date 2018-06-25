@@ -16,11 +16,14 @@ function initializeApp(data) {
           },
           methods: {
             sendTemplate: function (event) {
-                alert("2!")
                 liff.sendMessage([{
                     type: 'text',
                     text: "YES!、メッセージを送りました。"
-                }]);
+                }]).then(function () {
+                    window.alert("メッセージを送りました。");
+                }).catch(function (error) {
+                    window.alert("メッセージ送るを" + error);
+                });;
                 
             }
           }
