@@ -33,12 +33,12 @@ function initializeApp(data) {
                           {
                             "type": "uri",
                             "label": "はい！",
-                            "uri": "line://app/1589046222-VkRzQel7/rep?ans=no"
+                            "uri": "line://app/1589046222-VkRzQel7/rep.php?ans=no"
                           },
                           {
                             "type": "uri",
                             "label": "いいえ!",
-                            "uri": "line://app/1589046222-VkRzQel7rep?ans=no"
+                            "uri": "line://app/1589046222-VkRzQel7rep.php?ans=no"
                           }
                       ]
                   }

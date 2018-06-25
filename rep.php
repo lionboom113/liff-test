@@ -11,7 +11,7 @@
 	}
 
 	$ans = ($_GET["ans"]);
-	if($slide == 'yes') { 
+	if($ans == 'yes') { 
 	 	$a++;
 	 } else {
 	 	$b++;
