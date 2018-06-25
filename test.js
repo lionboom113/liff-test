@@ -105,21 +105,41 @@ function initializeApp(data) {
                     originalContentUrl: url,
                     previewImageUrl: url
                 },
-                {
-                  type: "template",
-                  altText: "this is a confirm template",
-                  template: {
-                      type: "confirm",
-                      text: "Are you sure?",
-                      actions: [
-                          {
-                            type: "uri",
-                            label: "Yes",
-                            uri: "line://app/1589046222-VkRzQel7"
-                          }
-                      ]
-                  }
-                }
+{
+  "type": "template",
+  "altText": "This is a buttons template",
+  "template": {
+      "type": "buttons",
+      "thumbnailImageUrl": "https://example.com/bot/images/image.jpg",
+      "imageAspectRatio": "rectangle",
+      "imageSize": "cover",
+      "imageBackgroundColor": "#FFFFFF",
+      "title": "Menu",
+      "text": "Please select",
+      "defaultAction": {
+          "type": "uri",
+          "label": "View detail",
+          "uri": "http://example.com/page/123"
+      },
+      "actions": [
+          {
+            "type": "postback",
+            "label": "Buy",
+            "data": "action=buy&itemid=123"
+          },
+          {
+            "type": "postback",
+            "label": "Add to cart",
+            "data": "action=add&itemid=123"
+          },
+          {
+            "type": "uri",
+            "label": "View detail",
+            "uri": "http://example.com/page/123"
+          }
+      ]
+  }
+}
                 ]).then(function () {
                     liff.closeWindow();
                 }).catch(function (error) {
