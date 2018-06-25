@@ -76,6 +76,30 @@ function initializeApp(data) {
                     type: 'image',
                     originalContentUrl: url,
                     previewImageUrl: url
+                },{
+                  "type": "template",
+                  "altText": "This is a buttons template",
+                  "template": {
+                      "type": "buttons",
+                      "thumbnailImageUrl": url,
+                      "imageAspectRatio": "rectangle",
+                      "imageSize": "cover",
+                      "imageBackgroundColor": "#FFFFFF",
+                      "title": "Menu",
+                      "text": "Please select",
+                      "defaultAction": {
+                          "type": "uri",
+                          "label": "View detail",
+                          "uri": "http://example.com/page/123"
+                      },
+                      "actions": [
+                          {  
+                           "type":"uri",
+                           "label":"View details",
+                           "uri":"http://example.com/page/222"
+                        }
+                      ]
+                  }
                 }]).then(function () {
                     alert("メッセージを送りました。");
                     liff.closeWindow();
