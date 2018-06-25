@@ -84,7 +84,8 @@ function initializeApp(data) {
             "https://1.bp.blogspot.com/-rzffHKcQnEk/WvQH-Z_IHyI/AAAAAAABL_E/LBK5cIqtS2MqiRief4theSsM_xI9MUkrgCLcBGAs/s400/torokko_trolley_rail_businesswoman_out.png",
             "https://1.bp.blogspot.com/-3woIFWz1_Zk/WvQH8sRKO_I/AAAAAAABL-4/tPcqQau8EQQTWxbOA2Y_ZCjii2HGZ85TQCLcBGAs/s400/torokko_trolley_rail_businessman.png",
             "https://4.bp.blogspot.com/-H4YfqE0zNr8/WwofRfOyapI/AAAAAAABMYA/h97Wvj7YYQYLslHxT3VIKFSZjxWazMMBQCLcBGAs/s400/internet_gazou_ninsyou.png",
-            "https://2.bp.blogspot.com/-hYuHzCdrD2A/WtRzRhK4Z9I/AAAAAAABLlQ/dc1SsRgY7qAkpNVsQzUnW9iKgMWe_BICwCLcBGAs/s400/nage_kiss_man.png"]
+            "https://2.bp.blogspot.com/-hYuHzCdrD2A/WtRzRhK4Z9I/AAAAAAABLlQ/dc1SsRgY7qAkpNVsQzUnW9iKgMWe_BICwCLcBGAs/s400/nage_kiss_man.png"],
+            replies: ["がんばって","寝ちゃった","死んちゃおう","行ってくる","なに？","チュウー"]
           },
           methods: {
             sendTemplate: function (sendText) {
@@ -99,32 +100,32 @@ function initializeApp(data) {
                 });;
                 
             },
-            sendPicture: function sendPic (url) {
+            sendPicture: function sendPic (url, test) {
                 liff.sendMessages([
                 // {
                 //     type: 'image',
                 //     originalContentUrl: url,
                 //     previewImageUrl: url
                 // },
-{
-  "type": "template",
-  "altText": "This is a buttons template",
-  "template": {
-      "type": "buttons",
-      "thumbnailImageUrl": url,
-      "imageAspectRatio": "square",
-      "imageSize": "contain",
-      "imageBackgroundColor": "#FFFFFF",
-      "text": "画像ボタン！",
-      "actions": [
-          {
-            "type": "uri",
-            "label": "画像で返事",
-            "uri": "line://app/1589046222-VkRzQel7"
-          }
-      ]
-  }
-}
+                {
+                  "type": "template",
+                  "altText": "This is a buttons template",
+                  "template": {
+                      "type": "buttons",
+                      "thumbnailImageUrl": url,
+                      "imageAspectRatio": "square",
+                      "imageSize": "contain",
+                      "imageBackgroundColor": "#FFFFFF",
+                      "text": test,
+                      "actions": [
+                          {
+                            "type": "uri",
+                            "label": "画像で返事",
+                            "uri": "line://app/1589046222-VkRzQel7"
+                          }
+                      ]
+                  }
+                }
                 ]).then(function () {
                     liff.closeWindow();
                 }).catch(function (error) {
