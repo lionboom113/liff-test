@@ -109,7 +109,7 @@ function initializeApp(data) {
                 // },
                 {
                   "type": "template",
-                  "altText": "This is a buttons template",
+                  "altText": test,
                   "template": {
                       "type": "buttons",
                       "thumbnailImageUrl": url,
