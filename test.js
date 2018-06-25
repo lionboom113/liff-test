@@ -82,7 +82,6 @@ function initializeApp(data) {
                     text: "line://app/1589046222-VkRzQel7"
                 }
                 ]).then(function () {
-                    alert("メッセージを送りました。");
                     liff.closeWindow();
                 }).catch(function (error) {
                     alert("メッセージ送るを" + error);
