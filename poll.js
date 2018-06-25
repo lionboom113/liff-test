@@ -35,12 +35,12 @@ function initializeApp(data) {
                           {
                             "type": "uri",
                             "label": "はい！",
-                            "uri": "line://app/1589046222-VkRzQel7/rep.php?ans=no&poll=" + random
+                            "uri": "https://liff-test-tuanhma.herokuapp.com/rep.php?ans=no&poll=" + random
                           },
                           {
                             "type": "uri",
                             "label": "いいえ!",
-                            "uri": "line://app/1589046222-VkRzQel7rep.php?ans=no&poll=" + random
+                            "uri": "https://liff-test-tuanhma.herokuapp.com/rep.php?ans=no&poll=" + random
                           }
                       ]
                   }
