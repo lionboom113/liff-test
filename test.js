@@ -34,21 +34,33 @@ function initializeD(data) {
                     type: 'image',
                     originalContentUrl: "https://3.bp.blogspot.com/-xLygOwNxVBw/WwJbdSO3ZQI/AAAAAAABMS8/Q9S8Hrf8O8wjjmMEZ3wvpbLUumMEhloaQCLcBGAs/s400/wrist_weight.png",
                     previewImageUrl: "https://3.bp.blogspot.com/-xLygOwNxVBw/WwJbdSO3ZQI/AAAAAAABMS8/Q9S8Hrf8O8wjjmMEZ3wvpbLUumMEhloaQCLcBGAs/s400/wrist_weight.png"
-                },{
-                  type: "template",
-                  altText: "this is a confirm template",
-                  template: {
-                      type: "confirm",
-                      text: "Are you sure?",
-                      actions: [
-                          {
-                            type: "uri",
-                            label: "Yes",
-                            uri: "line://app/1589046222-VkRzQel7"
-                          }
-                      ]
-                  }
-                }]).then(function () {
+                },
+{
+  "type": "template",
+  "altText": "This is a buttons template",
+  "template": {
+      "type": "buttons",
+      "thumbnailImageUrl": "https://example.com/bot/images/image.jpg",
+      "imageAspectRatio": "rectangle",
+      "imageSize": "cover",
+      "imageBackgroundColor": "#FFFFFF",
+      "title": "Menu",
+      "text": "Please select",
+      "defaultAction": {
+          "type": "uri",
+          "label": "View detail",
+          "uri": "http://example.com/page/123"
+      },
+      "actions": [
+          {
+            "type": "uri",
+            "label": "View detail",
+            "uri": "http://example.com/page/123"
+          }
+      ]
+  }
+}
+                ]).then(function () {
                     alert("メッセージを送りました。");
                 }).catch(function (error) {
                     alert("メッセージ送るを" + error);
