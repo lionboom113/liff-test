@@ -46,6 +46,7 @@ function initializeApp(data) {
                     text: sendText
                 }]).then(function () {
                     alert("メッセージを送りました。");
+                    liff.closeWindow();
                 }).catch(function (error) {
                     alert("メッセージ送るを" + error);
                 });;
