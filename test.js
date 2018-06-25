@@ -110,23 +110,16 @@ function initializeApp(data) {
   "altText": "This is a buttons template",
   "template": {
       "type": "buttons",
-      "thumbnailImageUrl": "https://example.com/bot/images/image.jpg",
+      "thumbnailImageUrl": url,
       "imageAspectRatio": "rectangle",
       "imageSize": "cover",
       "imageBackgroundColor": "#FFFFFF",
-      "title": "Menu",
-      "text": "Please select",
       "defaultAction": {
           "type": "uri",
-          "label": "View detail",
-          "uri": "http://example.com/page/123"
+          "label": "へんじ",
+          "uri": "line://app/1589046222-VkRzQel7"
       },
       "actions": [
-          {
-            "type": "uri",
-            "label": "View detail",
-            "uri": "http://example.com/page/123"
-          }
       ]
   }
 }
