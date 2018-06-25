@@ -10,13 +10,14 @@ function initializeD(data) {
           el: '#app',
           data: {
             userId: "data.context.userId",
-            name: "result.displayName"
+            name: "result.displayName",
+            message : ""
           },
           methods: {
             sendTemplate: function (event) {
                 liff.sendMessages([{
                     type: 'text',
-                    text: "YES!、メッセージを送りました。"
+                    text: this.$data.message
                 }]).then(function () {
                     alert("メッセージを送りました。");
                 }).catch(function (error) {
@@ -42,7 +43,7 @@ function initializeApp(data) {
             sendTemplate: function (event) {
                 liff.sendMessages([{
                     type: 'text',
-                    text: "YES!、メッセージを送りました。"
+                    text: this.$data.message
                 }]).then(function () {
                     alert("メッセージを送りました。");
                 }).catch(function (error) {
