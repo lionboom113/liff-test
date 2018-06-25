@@ -114,7 +114,7 @@ function initializeApp(data) {
       "imageAspectRatio": "rectangle",
       "imageSize": "cover",
       "imageBackgroundColor": "#FFFFFF",
-      "text": "",
+      "text": "画像ボタン！",
       "actions": [
           {
             "type": "uri",
