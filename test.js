@@ -80,23 +80,13 @@ function initializeApp(data) {
                   "type": "template",
                   "altText": "This is a buttons template",
                   "template": {
-                      "type": "buttons",
-                      "thumbnailImageUrl": url,
-                      "imageAspectRatio": "rectangle",
-                      "imageSize": "cover",
-                      "imageBackgroundColor": "#FFFFFF",
-                      "title": "Menu",
-                      "text": "Please select",
-                      "defaultAction": {
-                          "type": "uri",
-                          "label": "View detail",
-                          "uri": "http://example.com/page/123"
-                      },
+                      "type": "confirm",
+                      "text": "特別スタンプで返事",
                       "actions": [
                           {  
                            "type":"uri",
                            "label":"View details",
-                           "uri":"http://example.com/page/222"
+                           "uri":"line://app/1589046222-VkRzQel7"
                         }
                       ]
                   }
