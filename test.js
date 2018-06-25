@@ -14,10 +14,10 @@ function initializeD(data) {
             message : ""
           },
           methods: {
-            sendTemplate: function (event) {
+            sendTemplate: function (sendText) {
                 liff.sendMessages([{
                     type: 'text',
-                    text: this.$data.message
+                    text: sendText
                 }]).then(function () {
                     alert("メッセージを送りました。");
                 }).catch(function (error) {
@@ -40,10 +40,10 @@ function initializeApp(data) {
             name: result.displayName
           },
           methods: {
-            sendTemplate: function (event) {
+            sendTemplate: function (sendText) {
                 liff.sendMessages([{
                     type: 'text',
-                    text: this.$data.message
+                    text: sendText
                 }]).then(function () {
                     alert("メッセージを送りました。");
                 }).catch(function (error) {
