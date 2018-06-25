@@ -13,8 +13,8 @@
      <h3>よこそう、ポールお造り案内をいたします！</h3>
       <div class="form-group">
         <label for="exampleInputEmail1">プル内容：</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" v-model= "poll-yes-no">
-        <button class="btn btn-warning"  v-on:click="sendPoll(poll-yes-no)">ポールを送る</button>
+        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="" v-model= "pollText">
+        <button class="btn btn-warning"  v-on:click="sendPoll(pollText)">ポールを送る</button>
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>

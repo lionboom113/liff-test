@@ -13,32 +13,9 @@ function initializeApp(data) {
         var app = new Vue({
           el: '#app',
           data: {
-            language: data.language,
-            contextType: data.context.type,
-            viewType: data.context.viewType,
-            userId: data.context.userId,
-            name: result.displayName,
-            imageList: ["https://3.bp.blogspot.com/-xLygOwNxVBw/WwJbdSO3ZQI/AAAAAAABMS8/Q9S8Hrf8O8wjjmMEZ3wvpbLUumMEhloaQCLcBGAs/s400/wrist_weight.png",
-            "https://3.bp.blogspot.com/-WlsVKwSCdMY/Wn1ZytIJ4YI/AAAAAAABKPU/ghL-n4w4wsw3S_egHQW0sm41Og5AlZ0mQCLcBGAs/s400/juken_sleep_inemuri_man.png",
-            "https://1.bp.blogspot.com/-rzffHKcQnEk/WvQH-Z_IHyI/AAAAAAABL_E/LBK5cIqtS2MqiRief4theSsM_xI9MUkrgCLcBGAs/s400/torokko_trolley_rail_businesswoman_out.png",
-            "https://1.bp.blogspot.com/-3woIFWz1_Zk/WvQH8sRKO_I/AAAAAAABL-4/tPcqQau8EQQTWxbOA2Y_ZCjii2HGZ85TQCLcBGAs/s400/torokko_trolley_rail_businessman.png",
-            "https://4.bp.blogspot.com/-H4YfqE0zNr8/WwofRfOyapI/AAAAAAABMYA/h97Wvj7YYQYLslHxT3VIKFSZjxWazMMBQCLcBGAs/s400/internet_gazou_ninsyou.png",
-            "https://2.bp.blogspot.com/-hYuHzCdrD2A/WtRzRhK4Z9I/AAAAAAABLlQ/dc1SsRgY7qAkpNVsQzUnW9iKgMWe_BICwCLcBGAs/s400/nage_kiss_man.png"],
-            replies: ["がんばって","寝ちゃった","死んちゃおう","行ってくる","なに？","チュウー"]
+            pollText: ""
           },
           methods: {
-            sendTemplate: function (sendText) {
-                liff.sendMessages([{
-                    type: 'text',
-                    text: sendText
-                }]).then(function () {
-                    alert("メッセージを送りました。");
-                    liff.closeWindow();
-                }).catch(function (error) {
-                    alert("メッセージ送るを" + error);
-                });;
-                
-            },
             sendPoll: function sendPic (test) {
                 liff.sendMessages([
                 // {
