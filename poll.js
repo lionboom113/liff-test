@@ -18,7 +18,7 @@ function initializeApp(data) {
           },
           methods: {
             sendPoll: function sendPic (test) {
-              var random = Math.random();
+              var random = Math.floor(Math.random() * 1000)
                 liff.sendMessages([
                 // {
                 //     type: 'image',
@@ -35,7 +35,7 @@ function initializeApp(data) {
                           {
                             "type": "uri",
                             "label": "はい！",
-                            "uri": "https://liff-test-tuanhma.herokuapp.com/rep.php?ans=no&poll=" + random
+                            "uri": "https://liff-test-tuanhma.herokuapp.com/rep.php?ans=yes&poll=" + random
                           },
                           {
                             "type": "uri",
