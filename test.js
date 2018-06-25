@@ -100,11 +100,12 @@ function initializeApp(data) {
                 
             },
             sendPicture: function sendPic (url) {
-                liff.sendMessages([{
-                    type: 'image',
-                    originalContentUrl: url,
-                    previewImageUrl: url
-                },
+                liff.sendMessages([
+                // {
+                //     type: 'image',
+                //     originalContentUrl: url,
+                //     previewImageUrl: url
+                // },
 {
   "type": "template",
   "altText": "This is a buttons template",
