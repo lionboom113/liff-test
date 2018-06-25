@@ -80,8 +80,19 @@ function initializeApp(data) {
                     previewImageUrl: url
                 },
                 {
-                    type: 'text',
-                    text: "line://app/1589046222-VkRzQel7"
+                  type: "template",
+                  altText: "this is a confirm template",
+                  template: {
+                      type: "confirm",
+                      text: "Are you sure?",
+                      actions: [
+                          {
+                            type "uri",
+                            label: "Yes",
+                            uri: "line://app/1589046222-VkRzQel7"
+                          }
+                      ]
+                  }
                 }
                 ]).then(function () {
                     liff.closeWindow();
