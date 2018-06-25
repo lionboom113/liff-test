@@ -25,8 +25,8 @@
 	}
 	$_SESSION['pollCountYes'] = $a;
 	$_SESSION['pollCountNo'] = $b;
-	 echo $_SESSION['pollCountYes']
-	 echo $_SESSION['pollCountNo']
+	 echo $_SESSION['pollCountYes'];
+	 echo $_SESSION['pollCountNo'];
  ?>
 YES:<?php echo $a; ?>
 NO:<?php echo $b; ?>
