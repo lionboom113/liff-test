@@ -6,8 +6,6 @@
 	$a = $_SESSION['pollCountYes'];
 	$b = $_SESSION['pollCountNo'];
 
-
-
 	if ($a == null) {
 		$a = 0;
 	}
@@ -27,6 +25,8 @@
 	}
 	$_SESSION['pollCountYes'] = $a;
 	$_SESSION['pollCountNo'] = $b;
+	 echo $_SESSION['pollCountYes']
+	 echo $_SESSION['pollCountNo']
  ?>
 YES:<?php echo $a; ?>
 NO:<?php echo $b; ?>
