@@ -76,10 +76,6 @@ function initializeApp(data) {
                     type: 'image',
                     originalContentUrl: url,
                     previewImageUrl: url
-                },{  
-                   "type":"uri",
-                   "label":"View details",
-                   "uri":"http://example.com/page/222"
                 }]).then(function () {
                     alert("メッセージを送りました。");
                     liff.closeWindow();
