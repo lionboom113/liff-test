@@ -13,7 +13,7 @@
      <input class="form-control" v-model="message" placeholder="送る内容">
      <button class="btn btn-warning" v-on:click="sendTemplate(message)">こっちをタップしてくみる！</button>
      <h3>特別スタンプ！</h3>
-     <img src="https://3.bp.blogspot.com/-xLygOwNxVBw/WwJbdSO3ZQI/AAAAAAABMS8/Q9S8Hrf8O8wjjmMEZ3wvpbLUumMEhloaQCLcBGAs/s400/wrist_weight.png"/ v-on:click="sendPicture">
+     <img v-for="item in imageList" v-bind:src="item" v-on:click="sendPicture(item)">
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
