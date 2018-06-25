@@ -114,12 +114,12 @@ function initializeApp(data) {
       "imageAspectRatio": "rectangle",
       "imageSize": "cover",
       "imageBackgroundColor": "#FFFFFF",
-      "defaultAction": {
-          "type": "uri",
-          "label": "へんじ",
-          "uri": "line://app/1589046222-VkRzQel7"
-      },
       "actions": [
+          {
+            "type": "uri",
+            "label": "画像で返事",
+            "uri": "line://app/1589046222-VkRzQel7"
+          }
       ]
   }
 }
