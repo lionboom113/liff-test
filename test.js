@@ -15,11 +15,13 @@ function initializeApp(data) {
             name: result.displayName
           },
           methods: {
-            sendTemplate: function (temp) {
+            sendTemplate: function (event) {
+                alert("2!")
                 liff.sendMessage([{
-                type: 'text',
-                text: "YES!、メッセージを送りました。"
-            }]);
+                    type: 'text',
+                    text: "YES!、メッセージを送りました。"
+                }]);
+                
             }
           }
         })
