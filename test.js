@@ -76,21 +76,28 @@ function initializeApp(data) {
                     type: 'image',
                     originalContentUrl: url,
                     previewImageUrl: url
-                },{
-                  "type": "template",
-                  "altText": "This is a buttons template",
-                  "template": {
+                },
+                {
+                    "type": "template",
+                    "altText": "this is a confirm template",
+                    "template": {
                       "type": "confirm",
-                      "text": "特別スタンプで返事",
+                      "text": "Are you sure?",
                       "actions": [
-                          {  
-                           "type":"uri",
-                           "label":"View details",
-                           "uri":"line://app/1589046222-VkRzQel7"
-                        }
+                          {
+                            "type": "message",
+                            "label": "Yes",
+                            "text": "yes"
+                          },
+                          {
+                            "type": "message",
+                            "label": "No",
+                            "text": "no"
+                          }
                       ]
-                  }
-                }]).then(function () {
+                    }
+                }
+                ]).then(function () {
                     alert("メッセージを送りました。");
                     liff.closeWindow();
                 }).catch(function (error) {
