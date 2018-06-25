@@ -42,7 +42,7 @@ function initializeD(data) {
                       text: "Are you sure?",
                       actions: [
                           {
-                            type "uri",
+                            type: "uri",
                             label: "Yes",
                             uri: "line://app/1589046222-VkRzQel7"
                           }
@@ -101,7 +101,7 @@ function initializeApp(data) {
                       text: "Are you sure?",
                       actions: [
                           {
-                            type "uri",
+                            type: "uri",
                             label: "Yes",
                             uri: "line://app/1589046222-VkRzQel7"
                           }
