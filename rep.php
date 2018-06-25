@@ -1,5 +1,6 @@
 <!-- This file allows you to host this page as a static file on Heroku -->
 <?php 
+	session_id('1111');
 	session_start();
 
 	$a = $_SESSION['pollCountYes'];
