@@ -24,6 +24,17 @@ function initializeD(data) {
                     alert("メッセージ送るを" + error);
                 });;
                 
+            },
+            sendPicture: function sendPic () {
+                liff.sendMessages([{
+                    type: 'image',
+                    originalContentUrl: "https://3.bp.blogspot.com/-xLygOwNxVBw/WwJbdSO3ZQI/AAAAAAABMS8/Q9S8Hrf8O8wjjmMEZ3wvpbLUumMEhloaQCLcBGAs/s400/wrist_weight.png",
+                    previewImageUrl: "https://3.bp.blogspot.com/-xLygOwNxVBw/WwJbdSO3ZQI/AAAAAAABMS8/Q9S8Hrf8O8wjjmMEZ3wvpbLUumMEhloaQCLcBGAs/s400/wrist_weight.png"
+                }]).then(function () {
+                    alert("メッセージを送りました。");
+                }).catch(function (error) {
+                    alert("メッセージ送るを" + error);
+                });;
             }
           }
     });
@@ -51,6 +62,18 @@ function initializeApp(data) {
                     alert("メッセージ送るを" + error);
                 });;
                 
+            },
+            sendPicture: function sendPic () {
+                liff.sendMessages([{
+                    type: 'image',
+                    originalContentUrl: "https://3.bp.blogspot.com/-xLygOwNxVBw/WwJbdSO3ZQI/AAAAAAABMS8/Q9S8Hrf8O8wjjmMEZ3wvpbLUumMEhloaQCLcBGAs/s400/wrist_weight.png",
+                    previewImageUrl: "https://3.bp.blogspot.com/-xLygOwNxVBw/WwJbdSO3ZQI/AAAAAAABMS8/Q9S8Hrf8O8wjjmMEZ3wvpbLUumMEhloaQCLcBGAs/s400/wrist_weight.png"
+                }]).then(function () {
+                    alert("メッセージを送りました。");
+                    liff.closeWindow();
+                }).catch(function (error) {
+                    alert("メッセージ送るを" + error);
+                });;
             }
           }
         })
