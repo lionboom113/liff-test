@@ -14,7 +14,7 @@
 		$b = 0;
 	}
 
-	echo $_SESSION['pollCountYes'; 
+	echo $_SESSION['pollCountYes']; 
 	echo $_SESSION['pollCountNo'];
 
 	$ans = ($_GET["ans"]);
