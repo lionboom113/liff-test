@@ -13,6 +13,14 @@ function initializeApp(data) {
             viewType: data.context.viewType,
             userId: data.context.userId,
             name: result.displayName
+          },
+          methods: {
+            sendTemplate: function (temp) {
+                liff.sendMessage([{
+                type: 'text',
+                text: "YES!、メッセージを送りました。"
+            }]);
+            }
           }
         })
     });
