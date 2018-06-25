@@ -112,7 +112,7 @@ function initializeApp(data) {
       "type": "buttons",
       "thumbnailImageUrl": url,
       "imageAspectRatio": "rectangle",
-      "imageSize": "cover",
+      "imageSize": "contain",
       "imageBackgroundColor": "#FFFFFF",
       "text": "画像ボタン！",
       "actions": [
