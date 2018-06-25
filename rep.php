@@ -18,7 +18,7 @@
 	$ans = ($_GET["ans"]);
 	if($ans == 'yes') { 
 	 	$a++;
-	 } else {
+	 } else if($ans == 'no'){
 	 	$b++;
 	}
 	$_SESSION['pollCountYes'] = $a;

@@ -41,6 +41,11 @@ function initializeApp(data) {
                             "type": "uri",
                             "label": "いいえ!",
                             "uri": "https://liff-test-tuanhma.herokuapp.com/rep.php?ans=no&poll=" + random
+                          },
+                          {
+                            "type": "uri",
+                            "label": "結果を見る!",
+                            "uri": "https://liff-test-tuanhma.herokuapp.com/rep.php?poll=" + random
                           }
                       ]
                   }
