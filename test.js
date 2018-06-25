@@ -112,7 +112,7 @@ function initializeApp(data) {
   "template": {
       "type": "buttons",
       "thumbnailImageUrl": url,
-      "imageAspectRatio": "rectangle",
+      "imageAspectRatio": "square",
       "imageSize": "contain",
       "imageBackgroundColor": "#FFFFFF",
       "text": "画像ボタン！",
