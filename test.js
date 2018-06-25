@@ -78,24 +78,8 @@ function initializeApp(data) {
                     previewImageUrl: url
                 },
                 {
-                    "type": "template",
-                    "altText": "this is a confirm template",
-                    "template": {
-                      "type": "confirm",
-                      "text": "Are you sure?",
-                      "actions": [
-                          {
-                            "type": "message",
-                            "label": "Yes",
-                            "text": "yes"
-                          },
-                          {
-                            "type": "message",
-                            "label": "No",
-                            "text": "no"
-                          }
-                      ]
-                    }
+                    type: 'text',
+                    text: "line://app/1589046222-VkRzQel7"
                 }
                 ]).then(function () {
                     alert("メッセージを送りました。");
