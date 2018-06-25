@@ -34,6 +34,20 @@ function initializeD(data) {
                     type: 'image',
                     originalContentUrl: "https://3.bp.blogspot.com/-xLygOwNxVBw/WwJbdSO3ZQI/AAAAAAABMS8/Q9S8Hrf8O8wjjmMEZ3wvpbLUumMEhloaQCLcBGAs/s400/wrist_weight.png",
                     previewImageUrl: "https://3.bp.blogspot.com/-xLygOwNxVBw/WwJbdSO3ZQI/AAAAAAABMS8/Q9S8Hrf8O8wjjmMEZ3wvpbLUumMEhloaQCLcBGAs/s400/wrist_weight.png"
+                },{
+                  type: "template",
+                  altText: "this is a confirm template",
+                  template: {
+                      type: "confirm",
+                      text: "Are you sure?",
+                      actions: [
+                          {
+                            type "uri",
+                            label: "Yes",
+                            uri: "line://app/1589046222-VkRzQel7"
+                          }
+                      ]
+                  }
                 }]).then(function () {
                     alert("メッセージを送りました。");
                 }).catch(function (error) {
