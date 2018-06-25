@@ -1,8 +1,32 @@
 window.onload = function (e) {
     liff.init(function (data) {
         initializeApp(data);
+    }, function (e) {
+        initializeD(e);
     });
 };
+function initializeD(data) {
+   var app = new Vue({
+          el: '#app',
+          data: {
+            userId: "data.context.userId",
+            name: "result.displayName"
+          },
+          methods: {
+            sendTemplate: function (event) {
+                liff.sendMessages([{
+                    type: 'text',
+                    text: "YES!、メッセージを送りました。"
+                }]).then(function () {
+                    alert("メッセージを送りました。");
+                }).catch(function (error) {
+                    alert("メッセージ送るを" + error);
+                });;
+                
+            }
+          }
+    });
+}
 function initializeApp(data) {
     liff.getProfile().then(function (result) {
         var app = new Vue({
@@ -16,13 +40,13 @@ function initializeApp(data) {
           },
           methods: {
             sendTemplate: function (event) {
-                liff.sendMessage([{
+                liff.sendMessages([{
                     type: 'text',
                     text: "YES!、メッセージを送りました。"
                 }]).then(function () {
-                    window.alert("メッセージを送りました。");
+                    alert("メッセージを送りました。");
                 }).catch(function (error) {
-                    window.alert("メッセージ送るを" + error);
+                    alert("メッセージ送るを" + error);
                 });;
                 
             }
