@@ -110,10 +110,12 @@ function initializeApp(data) {
   "altText": "This is a buttons template",
   "template": {
       "type": "buttons",
-      "thumbnailImageUrl": url,
+      "thumbnailImageUrl": "https://example.com/bot/images/image.jpg",
       "imageAspectRatio": "rectangle",
       "imageSize": "cover",
       "imageBackgroundColor": "#FFFFFF",
+      "title": "Menu",
+      "text": "Please select",
       "actions": [
           {
             "type": "uri",
