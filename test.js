@@ -70,6 +70,8 @@ function initializeD(data) {
     });
 }
 function initializeApp(data) {
+	alert("a");
+	alert(data.userId);
     liff.getProfile().then(function (result) {
         var app = new Vue({
           el: '#app',
