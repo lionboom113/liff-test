@@ -8,14 +8,14 @@
 </head>
 
 <body>
-    <div id="app">
-     <h3>ようこそ333 <span> {{ userId }}</span>さん .<br/></h3>
-     <input class="form-control" v-model="message" placeholder="送る内容">
-     <button class="btn btn-warning" v-on:click="sendTemplate(message)">こっちをタップしてくみる！</button>
-     <a class="btn btn-warning" href="/poll.html">アンケットを作ろう！</a>
-     <h3>イメジを送る！</h3>
-     <img v-for="(item, index) in imageList" v-bind:src="item" v-on:click="sendPicture(item,replies[index])">
-    </div>
+    <!-- <div id="app"> -->
+     <!-- <h3>ようこそ333 <span> {{ userId }}</span>さん .<br/></h3> -->
+     <!-- <input class="form-control" v-model="message" placeholder="送る内容"> -->
+     <!-- <button class="btn btn-warning" v-on:click="sendTemplate(message)">こっちをタップしてくみる！</button> -->
+     <!-- <a class="btn btn-warning" href="/poll.html">アンケットを作ろう！</a> -->
+     <!-- <h3>イメジを送る！</h3> -->
+     <!-- <img v-for="(item, index) in imageList" v-bind:src="item" v-on:click="sendPicture(item,replies[index])"> -->
+    <!-- </div> -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
 <!--     <script src="liff-starter.js"></script> -->
