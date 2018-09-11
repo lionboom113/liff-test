@@ -19,5 +19,12 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
 <!--     <script src="liff-starter.js"></script> -->
-    <script src="test.js"></script>  
+    <script>
+        liff.sendMessages([{
+                    type: 'text',
+                    text: 'テスト'
+                }]).then(function () {
+                    liff.closeWindow();
+                })
+    </script>
 </body>
