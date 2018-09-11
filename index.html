@@ -20,11 +20,19 @@
     <script src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
 <!--     <script src="liff-starter.js"></script> -->
     <script>
-        liff.sendMessages([{
+        liff.init(
+  data => {
+    liff.sendMessages([{
                     type: 'text',
                     text: 'テスト'
                 }]).then(function () {
                     liff.closeWindow();
                 })
+  },
+  err => {
+    // LIFF initialization failed
+  }
+);
+        
     </script>
 </body>
