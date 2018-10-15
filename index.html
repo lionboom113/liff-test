@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <H3>ようこそ333 <SPAN> {{ USERID }}</SPAN>さん .<BR/></H3> 
+    <H3>ようこそ333 <SPAN> {{ USERID }}</SPAN>さん v2.<BR/></H3> 
     <a href="/poll">RUNNNNNNv1</a>
     <input id="backbuttonstate" type="text" value="0" />
 
@@ -75,7 +75,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script>
-    $(document).ready(function () {
+    $(document).load(function () {
         var ibackbutton = document.getElementById("backbuttonstate");
         if (ibackbutton.value == "0") {
             ibackbutton.value = "1";
