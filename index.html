@@ -9,7 +9,7 @@
 
 <body>
     <H3>ようこそ333 <SPAN> {{ USERID }}</SPAN>さん .<BR/></H3> 
-    <a href="/poll">RUNNNNNN</a>
+    <a href="/poll">RUNNNNNNv1</a>
     <input id="backbuttonstate" type="text" value="0" />
 
     <button type="button" class="btnListLink btnArrow btnArrowR btnPrimary btnSmall"  onclick="showModal()"><span class="btnBold">解除する</span></button>
@@ -87,6 +87,7 @@
         $("#delete-modal").modal('show');
     }
     function gogo() {
+        $("#delete-modal").modal('toggle');
         $("form").submit();
     }
 </script>
