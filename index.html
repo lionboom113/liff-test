@@ -8,18 +8,31 @@
 </head>
 
 <body>
-    <!-- <div id="app"> -->
-     <!-- <h3>ようこそ333 <span> {{ userId }}</span>さん .<br/></h3> -->
-     <!-- <input class="form-control" v-model="message" placeholder="送る内容"> -->
-     <!-- <button class="btn btn-warning" v-on:click="sendTemplate(message)">こっちをタップしてくみる！</button> -->
-     <!-- <a class="btn btn-warning" href="/poll.html">アンケットを作ろう！</a> -->
-     <!-- <h3>イメジを送る！</h3> -->
-     <!-- <img v-for="(item, index) in imageList" v-bind:src="item" v-on:click="sendPicture(item,replies[index])"> -->
-    <!-- </div> -->
+    <H3>ようこそ333 <SPAN> {{ USERID }}</SPAN>さん .<BR/></H3> 
+    <a href="/poll">RUNNNNNN</a>
+    <!-- <DIV ID="APP"> -->
+     <!-- <H3>ようこそ333 <SPAN> {{ USERID }}</SPAN>さん .<BR/></H3> -->
+     <!-- <INPUT CLASS="FORM-CONTROL" V-MODEL="MESSAGE" PLACEHOLDER="送る内容"> -->
+     <!-- <BUTTON CLASS="BTN BTN-WARNING" V-ON:CLICK="SENDTEMPLATE(MESSAGE)">こっちをタップしてくみる！</BUTTON> -->
+     <!-- <A CLASS="BTN BTN-WARNING" HREF="/POLL.HTML">アンケットを作ろう！</A> -->
+     <!-- <H3>イメジを送る！</H3> -->
+     <!-- <IMG V-FOR="(ITEM, INDEX) IN IMAGELIST" V-BIND:SRC="ITEM" V-ON:CLICK="SENDPICTURE(ITEM,REPLIES[INDEX])"> -->
+    <!-- </DIV> -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
-<!--     <script src="liff-starter.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
+    $(document).ready(function () {
+        var ibackbutton = document.getElementById("backbuttonstate");
+        if (ibackbutton.value == "0") {
+            ibackbutton.value = "1";
+        } else {
+            window.location.replace("/ok");
+        }
+    });
+</script>
+<!--     <script src="liff-starter.js"></script> -->
+   <!--  <script>
         liff.init(
   data => {
     liff.sendMessages([{
@@ -34,5 +47,5 @@
   }
 );
         
-    </script>
+    </script> -->
 </body>
