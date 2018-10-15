@@ -3,7 +3,7 @@
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <meta http-equiv="Content-Language" content="ja" />
     <title>LIFF Starter</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -11,6 +11,56 @@
     <H3>ようこそ333 <SPAN> {{ USERID }}</SPAN>さん .<BR/></H3> 
     <a href="/poll">RUNNNNNN</a>
     <input id="backbuttonstate" type="text" value="0" />
+
+    <button type="button" class="btnListLink btnArrow btnArrowR btnPrimary btnSmall"  onclick="showModal()"><span class="btnBold">解除する</span></button>
+    <div class="modal fade" id="delete-modal" role="dialog">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-body">
+                <CENTER>
+                    <p></p>
+                    <p>メンバーズカードの解除を実行します。</p>
+                    <p>尚、解除後も再度メンバーズカードを設定</p>
+                    <p>することが可能です。</p>
+                    <p></p>
+                </CENTER>
+            </div>
+            <div class="modal-footer">
+                <div class="row no-padding-margin">
+                    <div class="col-sm-6 no-padding">
+                        <a href="/Poll">GO GO GO</a>
+                    </div>
+                    <div class="col-sm-6 no-padding">
+                        <button type="button" class="btn btn-default btn-block padding-12" data-dismiss="modal">キャンセル</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Trigger the modal with a button -->
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the modal.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
     <!-- <DIV ID="APP"> -->
      <!-- <H3>ようこそ333 <SPAN> {{ USERID }}</SPAN>さん .<BR/></H3> -->
      <!-- <INPUT CLASS="FORM-CONTROL" V-MODEL="MESSAGE" PLACEHOLDER="送る内容"> -->
@@ -19,9 +69,9 @@
      <!-- <H3>イメジを送る！</H3> -->
      <!-- <IMG V-FOR="(ITEM, INDEX) IN IMAGELIST" V-BIND:SRC="ITEM" V-ON:CLICK="SENDPICTURE(ITEM,REPLIES[INDEX])"> -->
     <!-- </DIV> -->
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script>
     $(document).ready(function () {
         var ibackbutton = document.getElementById("backbuttonstate");
@@ -31,6 +81,9 @@
             window.location.replace("/ok");
         }
     });
+    function showModal() {
+        $("#delete-modal").modal('show');
+    }
 </script>
 <!--     <script src="liff-starter.js"></script> -->
    <!--  <script>
